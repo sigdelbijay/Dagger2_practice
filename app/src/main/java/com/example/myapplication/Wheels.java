@@ -1,11 +1,13 @@
 package com.example.myapplication;
-
-import javax.inject.Inject;
+//let a 3rd party dependency
 
 public class Wheels {
 
-    @Inject
-    public Wheels() {
+    private Rims rims;
+    private Tyres tyres;
 
+    public Wheels(Rims rims, Tyres tyres) {
+        this.rims = rims;
+        this.tyres = tyres;
     }
 }
