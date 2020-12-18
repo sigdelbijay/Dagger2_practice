@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
 //    private Car car;
-    @Inject Car car;
+    @Inject Car car1, car2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 //                .dieselEngineModule(new DieselEngineModule(100)).build();
 
         component.inject(this);
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }
